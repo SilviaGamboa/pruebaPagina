@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Citas</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    /> <!--para usar los estilos font awesome-->
+    <script   src = "js/citas.js"></script>
+    
+</head>
+</head>
+<body>
+  
+  <div id="header-container"></div>
+
+  <main>
+    
+    <div class = " contenedorCalendario">
+        <div class="izquierda">
+            <div class="calendario">
+              <div class="mes">
+                <i class="fas fa-angle-left prev"></i> <!-- la i es estilo cursiva, fas fa-angle-left es un icono de flecha a la derecha de FontAwesome-->
+                <div class="date">Enero 2024</div>
+                <i class="fas fa-angle-right next"></i>
+               </div>
+               <div class="diasSemana">
+                <div>Dom</div>
+                <div>Lun</div>
+                <div>Mar</div>
+                <div>Mier</div>
+                <div>Juev</div>
+                <div>Vier</div>
+                <div>Sab</div>
+              </div>
+              <div class="dias">
+               
+            </div><!--dias-->
+              
+              <div class="goto-hoy">
+                <div class="goto">
+                  <input type="text" placeholder="mm/yyyy" class="date-input" />
+                  <button class="goto-btn">Ir a</button>
+                </div>
+                <button class="today-btn">Hoy</button>
+              </div><!--goto-hoy-->
+
+            </div><!--calendario-->
+        </div><!--izquierda-->
+        <div class="right">
+            <div class="today-date">
+              <div class="event-day">wed</div>
+              <div class="event-date">12th december 2022</div>
+            </div>
+            <div class="events">
+             
+            </div>
+          
+            <div class="add-event-wrapper">
+              <div class="add-event-header">
+                <div class="title">Agendar Cita</div>
+                <i class="fas fa-times close"></i>
+              </div>
+              <div class="add-event-body">
+                <div class="add-event-input">
+                  <select class="event-name" id="departamento" name="departamento">
+                    <option value="">Seleccionar Departamento</option>
+                    <option value="Medicina General">Medicina General</option>
+                    <option value="Dermatología">Dermatología</option>
+                    <option value="Pediatría">Pediatría</option>
+                    <option value="Odontología">Odontología</option>
+                    <option value="Ginecología y Obstetricia">Ginecología y Obstetricia</option>
+                    <option value="Oftalmología">Oftalmología</option>
+                  </select>
+                </div>
+                <div class="add-event-input">
+                  <select class="event-time-from"> 
+                    <option value="">Seleccionar Hora</option>
+                    <option value="08:00-09:00">08:00 AM - 09:00 AM</option>
+                    <option value="09:00-10:00">09:00 AM - 10:00 AM</option>
+                    <option value="10:00-11:00">10:00 AM - 11:00 AM</option>
+                    <option value="11:00-12:00">11:00 AM - 12:00 PM</option>
+                    <option value="12:00-13:00">12:00 PM - 01:00 PM</option>
+                    <option value="13:00-14:00">01:00 PM - 02:00 PM</option>
+                    <option value="14:00-15:00">02:00 PM - 03:00 PM</option>
+                    <option value="15:00-16:00">03:00 PM - 04:00 PM</option>
+                    <option value="16:00-17:00">04:00 PM - 05:00 PM</option>
+                    <option value="17:00-18:00">05:00 PM - 06:00 PM</option>
+                    <option value="18:00-19:00">06:00 PM - 07:00 PM</option>
+                    <option value="19:00-20:00">07:00 PM - 08:00 PM</option>
+                  </select>
+                </div>
+                <div class="add-event-input">
+                  <select class="selecMedico">
+                    <option value="">Seleccionar Medico</option>
+                   
+                  </select>
+                </div>
+              </div>
+              <div class="add-event-footer">
+                <button class="add-event-btn">Aceptar</button>
+                
+              </div>
+              
+            </div><!--derecha-->
+          </div>
+          <button class="add-event">
+            <i class="fas fa-plus"></i>
+          </button>
+        </div>
+            </div>
+        </div>    
+    </div>
+
+    
+        
+
+
+    </main>
+
+  
+    <div id="footer-container"></div>
+
+    <script>
+        // Función para cargar el contenido del header
+        function cargarHeader() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-container').innerHTML = data;
+                });
+        }
+
+        // Función para cargar el contenido del footer
+        function cargarFooter() {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-container').innerHTML = data;
+                });
+        }
+
+        // Llamar a las funciones para cargar el header y el footer cuando el documento esté listo
+        document.addEventListener('DOMContentLoaded', function() {
+            cargarHeader();
+            cargarFooter();
+        });
+    </script>
+
+</body>
+</html>

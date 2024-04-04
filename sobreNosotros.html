@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árbol de Seda</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    
+</head>
+<body>
+ 
+  <div id="header-container"></div>
+
+  <main>
+    <div class="container">
+        <section>
+        <h1>Información sobre la empresa</h1>
+        <p>Árbol de Seda es una clínica médica comprometida con brindar servicios de salud de alta calidad a la comunidad. Desde nuestra fundación en el año 2000, hemos trabajado incansablemente para mejorar la calidad de vida de nuestros pacientes y sus familias.</p>
+        
+        <h3>Historia de la empresa</h3>
+        <p>Árbol de Seda fue fundada por el Dr. Francisco Pérez, un reconocido médico especializado en cardiología, y su esposa, la Dra. María Rodríguez, pediatra de renombre. Juntos, combinaron su experiencia y pasión por la medicina para establecer una clínica que ofreciera atención médica integral y personalizada a todos los pacientes.</p>
+        
+        <h3>Misión</h3>
+        <p>Nuestra misión es proporcionar atención médica de excelencia, centrada en el paciente y basada en los principios de ética, profesionalismo e innovación constante. Nos esforzamos por brindar un ambiente cálido y acogedor donde cada paciente se sienta escuchado, comprendido y cuidado.</p>
+        
+        <h3>Visión</h3>
+        <p>Como clínica líder en el sector de la salud, nuestra visión es ser reconocidos por nuestro compromiso con la excelencia médica, la mejora continua y la satisfacción de nuestros pacientes. Aspiramos a ser un referente en el cuidado de la salud, contribuyendo al bienestar de la comunidad.</p>
+        
+        <h3>Valores</h3>
+        <ul>
+            <li><strong>Excelencia médica:</strong> Nos esforzamos por ofrecer servicios de la más alta calidad, respaldados por el conocimiento científico y la experiencia de nuestro equipo médico.</li>
+            <li><strong>Compromiso con el paciente:</strong> Ponemos al paciente en el centro de todo lo que hacemos, brindando atención personalizada y empática en todo momento.</li>
+            <li><strong>Ética profesional:</strong> Actuamos con integridad, honestidad y respeto en todas nuestras interacciones, manteniendo la confidencialidad y la privacidad de la información del paciente.</li>
+            <li><strong>Innovación continua:</strong> Estamos siempre en busca de nuevas tecnologías, tratamientos y prácticas médicas para mejorar la calidad de la atención y los resultados para nuestros pacientes.</li>
+            <li><strong>Trabajo en equipo:</strong> Valoramos la colaboración y el trabajo conjunto entre médicos, personal de salud y pacientes para lograr los mejores resultados en el cuidado de la salud.</li>
+        </ul>
+        </section>
+
+        <section> 
+            <h1>Información sobre el equipo</h1>
+            <p>En Árbol de Seda contamos con un equipo multidisciplinario de profesionales altamente calificados y comprometidos con la salud y el bienestar de nuestros pacientes. A continuación, presentamos algunos de los miembros destacados de nuestro equipo:</p>
+            
+            <h3>Médicos</h3>
+            <ul>
+                <!-- <strong> es para la letra en negrita-->
+                <li><strong>Dr. Francisco Pérez</strong> - Cardiólogo y fundador de Árbol de Seda. Con más de 20 años de experiencia en el tratamiento de enfermedades cardíacas.</li>
+                <li><strong>Dra. María Rodríguez</strong> - Pediatra y cofundadora de la clínica. Especializada en el cuidado de niños y adolescentes.</li>
+                <li><strong>Dra. Laura Gómez</strong> - Ginecóloga y obstetra. Experta en atención prenatal y salud reproductiva de la mujer.</li>
+                <li><strong>Dr. Carlos Fernández</strong> - Dermatólogo. Ofrece tratamientos avanzados para enfermedades de la piel y procedimientos estéticos.</li>
+            </ul>
+            
+            <h3>Personal Administrativo</h3>
+            <ul>
+                <li><strong>Ana Martínez</strong> - Gerente de operaciones. Encargada de coordinar el funcionamiento eficiente de la clínica y la atención al paciente.</li>
+                <li><strong>José López</strong> - Asistente administrativo. Apoya en la gestión de citas, facturación y atención al cliente.</li>
+            </ul>
+            
+            <h3>Desarrolladores</h3>
+            <ul>
+                <li><strong>Luis González</strong> - Desarrollador Frontend. Responsable de la interfaz de usuario del sistema de citas médicas en línea.</li>
+                <li><strong>María Fernández</strong> - Desarrolladora Backend. Encargada del funcionamiento y la integración de bases de datos en el sistema.</li>
+            </ul>
+        </section>
+    </div>
+
+   
+
+    </main>
+
+  
+    <div id="footer-container"></div>
+
+    <script>
+        // Función para cargar el contenido del header
+        function cargarHeader() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-container').innerHTML = data;
+                });
+        }
+
+        // Función para cargar el contenido del footer
+        function cargarFooter() {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-container').innerHTML = data;
+                });
+        }
+
+        // Llamar a las funciones para cargar el header y el footer cuando el documento esté listo
+        document.addEventListener('DOMContentLoaded', function() {
+            cargarHeader();
+            cargarFooter();
+        });
+    </script>
+
+</body>
+</html>

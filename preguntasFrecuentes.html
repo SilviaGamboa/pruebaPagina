@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árbol de Seda</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    
+</head>
+</head>
+<body>
+  
+  <div id="header-container"></div>
+
+  <main>
+    <div class="container">
+        <h1>Preguntas Frecuentes - Clínica Árbol de Seda</h1>
+        
+        <div class="faq-seccion">
+            <div class="faq-pregunta">1. ¿Cómo puedo agendar una cita médica en la Clínica Árbol de Seda?</div>
+            <div class="faq-respuesta">
+                <p>Puede agendar una cita médica en nuestra clínica de las siguientes formas:</p>
+                <ul>
+                    <li>Llamando a nuestro número telefónico: 2538-1257.</li>
+                    <li>Usando nuestro sistema de citas en línea en nuestro sitio web.</li>
+                    <li>Visitando nuestras instalaciones y agendando una cita en persona.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="faq-seccion">
+            <div class="faq-pregunta">2. ¿Cuál es la política de cancelación de citas médicas?</div>
+            <div class="faq-respuesta">
+                <p>Nuestra política de cancelación de citas es la siguiente:</p>
+                <ul>
+                    <li>Se requiere notificar la cancelación con al menos 24 horas de anticipación.</li>
+                    <li>Las cancelaciones tardías pueden estar sujetas a cargos adicionales.</li>
+                    <li>Para más detalles, comuníquese con nuestro equipo de atención al cliente.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="faq-seccion">
+            <div class="faq-pregunta">3. ¿Cuál es el procedimiento para obtener una segunda opinión médica?</div>
+            <div class="faq-respuesta">
+                <p>Para obtener una segunda opinión médica, siga estos pasos:</p>
+                <ol>
+                    <li>Comuníquese con nuestro personal para solicitar una consulta de segunda opinión.</li>
+                    <li>Proporcione toda la información médica relevante y los informes anteriores.</li>
+                    <li>Agende una cita con el especialista correspondiente para la segunda opinión.</li>
+                </ol>
+            </div>
+        </div>
+    
+
+    <div class="faq-seccion">
+        <div class="faq-pregunta">4. ¿Qué servicios médicos ofrece la Clínica Árbol de Seda?</div>
+        <div class="faq-respuesta">
+            <p>Ofrecemos una amplia gama de servicios médicos que incluyen:</p>
+            <ul>
+                <li>Consulta médica general.</li>
+                <li>Chequeo médico preventivo.</li>
+                <li>Citas de seguimiento para pacientes crónicos.</li>
+                <li>Consultas especializadas por especialidad médica.</li>
+                <li>Exámenes médicos específicos como análisis de sangre, ecografías, etc.</li>
+                <li>Segunda opinión médica.</li>
+                <li>Citas para procedimientos médicos o tratamientos específicos.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="faq-seccion">
+        <div class="faq-pregunta">5. ¿Cómo puedo obtener información sobre los médicos disponibles en la Clínica Árbol de Seda?</div>
+        <div class="faq-respuesta">
+            <p>Puede obtener información sobre nuestros médicos de las siguientes formas:</p>
+            <ul>
+                <li>Visitar nuestra página web donde tenemos perfiles detallados de los médicos.</li>
+                <li>Llamar a nuestra línea telefónica y preguntar por la disponibilidad de médicos.</li>
+                <li>Visitar nuestras instalaciones y hablar directamente con nuestro personal.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="faq-seccion">
+        <div class="faq-pregunta">6. ¿Cómo puedo saber si mi seguro médico es aceptado en la Clínica Árbol de Seda?</div>
+        <div class="faq-respuesta">
+            <p>Puede verificar si su seguro médico es aceptado de las siguientes formas:</p>
+            <ul>
+                <li>Llamar a nuestro servicio de atención al cliente y proporcionar los detalles de su seguro.</li>
+                <li>Consultar directamente con su proveedor de seguros para confirmar la cobertura en nuestra clínica.</li>
+            </ul>
+        </div>
+    </div>
+
+    </div>
+ </main>
+
+  
+    <div id="footer-container"></div>
+
+    <script>
+        // Función para cargar el contenido del header
+        function cargarHeader() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-container').innerHTML = data;
+                });
+        }
+
+        // Función para cargar el contenido del footer
+        function cargarFooter() {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-container').innerHTML = data;
+                });
+        }
+
+        // Llamar a las funciones para cargar el header y el footer cuando el documento esté listo
+        document.addEventListener('DOMContentLoaded', function() {
+            cargarHeader();
+            cargarFooter();
+        });
+    </script>
+
+</body>
+</html>
