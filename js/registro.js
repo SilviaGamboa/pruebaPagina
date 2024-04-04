@@ -45,8 +45,8 @@ document.addEventListener("DOMContentLoaded", () => {
     return { cedula, nombre, apellidos, numtelefono, correo, contrasenna, confirmContrasenna };
   };
   const validarCedula = (cedula) => /^\d{2}-\d{4}-\d{4}$/.test(cedula);
-  const validarNombre = (nombre) => /^[a-zA-Z]+$/.test(nombre);
-  const validarApellidos = (apellidos) => /^[a-zA-Z]+$/.test(apellidos);
+  const validarNombre = (nombre) => /^[a-zA-Z\s]+$/.test(nombre);
+  const validarApellidos = (apellidos) => /^[a-zA-Z\s]+$/.test(apellidos);
   const validarTelefono = (numtelefono) => /^\d{4}-\d{4}$/.test(numtelefono);
   const validarCorreo = (correo) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo);
   const validarContrasenna = (contrasenna) => /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[a-zA-Z]).{4,11}$/.test(contrasenna);

@@ -12,8 +12,10 @@
       integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    /> <!--para usar los estilos font awesome-->
+    /> <!--para usar los estilos font awesome para el calendario-->
+    <script   src = "js/headerFooter.js"></script>
     <script   src = "js/citas.js"></script>
+    
     
 </head>
 </head>
@@ -21,7 +23,7 @@
   
   <div id="header-container"></div>
 
-  <main>
+  <main class="main">
     
     <div class = " contenedorCalendario">
         <div class="izquierda">
@@ -114,6 +116,7 @@
           <button class="add-event">
             <i class="fas fa-plus"></i>
           </button>
+          
         </div>
             </div>
         </div>    
@@ -128,31 +131,7 @@
   
     <div id="footer-container"></div>
 
-    <script>
-        // Función para cargar el contenido del header
-        function cargarHeader() {
-            fetch('header.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('header-container').innerHTML = data;
-                });
-        }
-
-        // Función para cargar el contenido del footer
-        function cargarFooter() {
-            fetch('footer.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('footer-container').innerHTML = data;
-                });
-        }
-
-        // Llamar a las funciones para cargar el header y el footer cuando el documento esté listo
-        document.addEventListener('DOMContentLoaded', function() {
-            cargarHeader();
-            cargarFooter();
-        });
-    </script>
+    
 
 </body>
 </html>

@@ -6,6 +6,7 @@
     <title>Informacion Medicos</title>
     
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <script   src = "js/headerFooter.js"></script>
     <script type="module"  src = "js/medico.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.3/awesomplete.css">
     
@@ -14,9 +15,9 @@
 <body>
   
   <div id="header-container"></div>
-<main>
+<main class="main">
     
-    <div class="container"> 
+    <div class="containerMenu"> 
         <div   class="pagination"> 
         <form id="searchForm">
             <input id="searchInput" type="text" placeholder="Buscar médico...">
@@ -36,31 +37,7 @@
   
   <div id="footer-container"></div>
 
-  <script>
-    // Función para cargar el contenido del header
-    function cargarHeader() {
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header-container').innerHTML = data;
-            });
-    }
-
-    // Función para cargar el contenido del footer
-    function cargarFooter() {
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer-container').innerHTML = data;
-            });
-    }
-
-    // Llamar a las funciones para cargar el header y el footer cuando el documento esté listo
-    document.addEventListener('DOMContentLoaded', function() {
-        cargarHeader();
-        cargarFooter();
-    });
-</script>
+  
 
 </body>
 </html>

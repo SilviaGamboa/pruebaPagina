@@ -1,88 +1,85 @@
-import { GestionarUsuarios } from './gestionarUsuarios.js';
-import { Usuario } from './usuario.js';
-let intentos=0;
+import { GestionarUsuarios } from "./gestionarUsuarios.js";
+import { Usuario } from "./usuario.js";
+let intentos = 0;
 document.addEventListener("DOMContentLoaded", () => {
-    const formulario = document.getElementById("formulario");
-    
-    formulario.addEventListener("submit", (event) => {
-        event.preventDefault();
+  const formulario = document.getElementById("formulario");
 
-        const { cedula, contrasenna } = obtenerDatosFormulario();
-        const esValido = validarContrasenna(contrasenna) && validarCedula(cedula);
-        
-        if(esValido){
-            const gestionarUsuarios = new GestionarUsuarios();
-            
-            const existeUsuario = gestionarUsuarios.recuperarUsusuarioByCedula(cedula);
+  formulario.addEventListener("submit", (event) => {
+    event.preventDefault();
 
-            if(existeUsuario){
-                
-                const validarDatosUsuario = gestionarUsuarios.validarUsuario(cedula, contrasenna);
+    const { cedula, contrasenna } = obtenerDatosFormulario();
+    const esValido = validarContrasenna(contrasenna) && validarCedula(cedula);
 
-                if(validarDatosUsuario){
-                    const usuario = new Usuario(gestionarUsuarios.recuperarUsusuarioByCedula(cedula));
-                    guardarLocalStorage(usuario);
-                    manejarExito();
+    if (esValido) {
+      const gestionarUsuarios = new GestionarUsuarios();
 
-                }else{
-                    contrasennaIncorrecta();
-                   
-                }
+      const existeUsuario =
+        gestionarUsuarios.recuperarUsusuarioByCedula(cedula);
 
-            }else{
-                alert("Usuario no existe");
-            }
+      if (existeUsuario) {
+        const validarDatosUsuario = gestionarUsuarios.validarUsuario(
+          cedula,
+          contrasenna
+        );
 
-            
-
-            
-
-        }else{
-            manejarError();
+        if (validarDatosUsuario) {
+          const usuario = new Usuario(
+            gestionarUsuarios.recuperarUsusuarioByCedula(cedula)
+          );
+          guardarLocalStorage(usuario);
+          manejarExito();
+        } else {
+          contrasennaIncorrecta();
         }
-        
-    });
+      } else {
+        alert("Usuario no existe");
+      }
+    } else {
+      manejarError();
+    }
+  });
 });
 
 const obtenerDatosFormulario = () => {
-    const cedula = document.getElementById("cedula").value.trim();
-    const contrasenna = document.getElementById("contrasenna").value.trim();
-    return { cedula, contrasenna };
+  const cedula = document.getElementById("cedula").value.trim();
+  const contrasenna = document.getElementById("contrasenna").value.trim();
+  return { cedula, contrasenna };
 };
 
-const validarContrasenna = (contrasenna) => /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[a-zA-Z]).{4,11}$/.test(contrasenna);
+const validarContrasenna = (contrasenna) =>
+  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[a-zA-Z]).{4,11}$/.test(
+    contrasenna
+  );
 
 const validarCedula = (cedula) => /^\d{2}-\d{4}-\d{4}$/.test(cedula);
 
 const manejarExito = () => {
-    alert("Éxito: Los datos ingresados son válidos.");
-    limpiarCamposTexto();
-    window.location.replace('agendaCitas.html');
-    
-
+  alert("Éxito: Los datos ingresados son válidos.");
+  limpiarCamposTexto();
+  window.location.replace("agendaCitas.html");
 };
 
 const manejarError = () => {
-    alert("Error: Los datos ingresados no son válidos.");
+  alert("Error: Los datos ingresados no son válidos.");
 };
 
 function contrasennaIncorrecta() {
-    intentos++; 
-    
+  intentos++;
 
-    if (intentos >=3) {
-        alert("Ha ingresado la contraseña más de 3 veces");
-    }else{
-        alert("contrseña incorrecta, numero de intentos: "+ intentos + " de: 3" );
-    }
+  if (intentos >= 3) {
+    alert("Ha ingresado la contraseña más de 3 veces");
+  } else {
+    alert("contrseña incorrecta, numero de intentos: " + intentos + " de: 3");
+  }
 }
 
 const limpiarCamposTexto = () => {
-    const campos = document.querySelectorAll("#formulario input[type='text'], #formulario input[type='password']");
-    campos.forEach((campo) => campo.value = "");
+  const campos = document.querySelectorAll(
+    "#formulario input[type='text'], #formulario input[type='password']"
+  );
+  campos.forEach((campo) => (campo.value = ""));
 };
 
- function guardarLocalStorage(usuario){
-    localStorage.setItem("usuario", JSON.stringify(usuario) );
-
- };
+function guardarLocalStorage(usuario) {
+  localStorage.setItem("usuario", JSON.stringify(usuario));
+}

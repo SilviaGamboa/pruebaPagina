@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Árbol de Seda</title>
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <script   src = "js/headerFooter.js"></script>
     
 </head>
 <body>
  
   <div id="header-container"></div>
 
-  <main>
+  <main class="main">
+    
     <div class="container">
         <section>
         <h1>Información sobre la empresa</h1>
@@ -70,31 +72,7 @@
   
     <div id="footer-container"></div>
 
-    <script>
-        // Función para cargar el contenido del header
-        function cargarHeader() {
-            fetch('header.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('header-container').innerHTML = data;
-                });
-        }
-
-        // Función para cargar el contenido del footer
-        function cargarFooter() {
-            fetch('footer.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('footer-container').innerHTML = data;
-                });
-        }
-
-        // Llamar a las funciones para cargar el header y el footer cuando el documento esté listo
-        document.addEventListener('DOMContentLoaded', function() {
-            cargarHeader();
-            cargarFooter();
-        });
-    </script>
+    
 
 </body>
 </html>
