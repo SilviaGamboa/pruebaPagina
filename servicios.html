@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árbol de Seda</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>
+<body>
+    <div id="header-container"></div>
+
+    <main>
+        <div class="container">
+            <h1>Servicios de Clínica Árbol de Seda</h1>
+            
+            <section>
+                <h2>Descripción de los servicios ofrecidos</h2>
+                <p>La Clínica Árbol de Seda ofrece una amplia gama de servicios médicos de alta calidad, centrados en el bienestar y la salud integral de nuestros pacientes. Nuestro sistema de citas médicas está diseñado para brindar una experiencia cómoda y eficiente a todos los usuarios.</p>
+            </section>
+            
+            <section>
+                <h2>Tipos de citas disponibles</h2>
+                <p>Nuestro sistema de citas médicas permite agendar diversos tipos de citas para satisfacer las necesidades de nuestros pacientes:</p>
+                <ul>
+                    <li>Consulta médica general</li>
+                    <li>Chequeo médico preventivo</li>
+                    <li>Citas de seguimiento para pacientes crónicos</li>
+                    <li>Consultas especializadas por especialidad médica (cardiología, pediatría, ginecología, dermatología, etc.)</li>
+                    <li>Exámenes médicos específicos (análisis de sangre, ecografías, radiografías, etc.)</li>
+                    <li>Segunda opinión médica</li>
+                    <li>Citas para procedimientos médicos o tratamientos específicos</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h2>Detalles sobre la disponibilidad de médicos y especialidades</h2>
+                <p>Contamos con un equipo de médicos altamente calificados y especializados en diversas áreas de la medicina para atender las necesidades de nuestros pacientes. Algunas de las especialidades médicas disponibles en nuestra clínica incluyen:</p>
+                <ul>
+                    <li>Cardiología</li>
+                    <li>Pediatría</li>
+                    <li>Ginecología y obstetricia</li>
+                    <li>Dermatología</li>
+                    <li>Endocrinología</li>
+                    <li>Neurología</li>
+                    <li>Psicología</li>
+                    <li>Oncología</li>
+                    <li>Cirugía general y especializada</li>
+                    <li>Medicina interna</li>
+                    
+                </ul>
+                <p>Nuestros médicos están disponibles en diferentes horarios para adaptarse a las necesidades de nuestros pacientes y ofrecer una atención médica oportuna y personalizada.</p>
+            </section>
+        </div>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script>
+        // Función para cargar el contenido del header
+        function cargarHeader() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-container').innerHTML = data;
+                });
+        }
+
+        // Función para cargar el contenido del footer
+        function cargarFooter() {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-container').innerHTML = data;
+                });
+        }
+
+        // Llamar a las funciones para cargar el header y el footer cuando el documento esté listo
+        document.addEventListener('DOMContentLoaded', function() {
+            cargarHeader();
+            cargarFooter();
+        });
+    </script>
+</body>
+</html>

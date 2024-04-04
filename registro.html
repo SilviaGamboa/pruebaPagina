@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    
+    <script type="module" src = "js/registro.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+
+    
+
+</head>
+</head>
+<body>
+  
+  <div id="header-container"></div>
+
+  <main>
+    <div class="contenido">
+
+        <div class="formulario">
+
+            <h2> Registro</h2>
+
+            <form id="formulario" method="post">
+
+                <div class="cedula">
+                    <label> Cédula de identidad: </label>
+                    <input type="text" id="cedula" maxlength="10" required> 
+
+                    <script>
+                        // Función para dar formato a la cédula
+                        function formatCedula(input) {
+                          // Remover cualquier carácter que no sea un dígito
+                          let cedula = input.value.replace(/\D/g, '');
+                        
+                          // Aplicar el formato de cédula (##-####-####)
+                          cedula = cedula.replace(/^(\d{2})(\d{4})(\d{4})$/, '$1-$2-$3');
+                        
+                          // Actualizar el valor del campo de entrada
+                          input.value = cedula;
+                        }
+                        
+                        // Obtener el campo de entrada de la cédula
+                        const cedulaInput = document.getElementById('cedula');
+                        
+                        // Agregar evento de input para formatear la cédula mientras se escribe
+                        cedulaInput.addEventListener('input', function() {
+                          formatCedula(this);
+                        });
+                        </script>
+
+                </div>
+
+                <div class="nombre">
+                    <label> Nombre: </label>
+                    <input id="nombre" type="text" maxlength="20" required>
+
+                </div>
+                <div class="apellidos">
+                    <label> Apellidos: </label>
+                    <input id="apellidos" type="text" maxlength="30" required>
+
+                </div>
+                
+                <div class="numTel">
+                    <label> Numero de telefono: </label>
+                    <input id="numeroTel" type="tel" maxlength="9" required>
+
+                    <script>
+                        // Función para dar formato al número de teléfono
+                        function formatNumeroTel(input) {
+                          // Remover cualquier carácter que no sea un dígito
+                          let numeroTel = input.value.replace(/\D/g, '');
+                        
+                          // Aplicar el formato de número de teléfono (####-####)
+                          numeroTel = numeroTel.replace(/^(\d{4})(\d{4})$/, '$1-$2');
+                        
+                          // Actualizar el valor del campo de entrada
+                          input.value = numeroTel;
+                        }
+                        
+                        // Obtener el campo de entrada del número de teléfono
+                        const numeroTelInput = document.getElementById('numeroTel');
+                        
+                        // Agregar evento de input para formatear el número de teléfono mientras se escribe
+                        numeroTelInput.addEventListener('input', function() {
+                          formatNumeroTel(this);
+                        });
+                        </script>
+
+                    
+               
+
+                </div>
+
+                <div class="usuarios">
+                    <label> Correo electrinico: </label>
+                    <input id="correo" type="email" required>
+
+                </div>
+                <div class="contrasenna">
+                    <label> Contraseña: </label>
+                    <input id="contrasenna" type="password" required>
+                    
+                </div>
+                <div class="confirmContrasenna">
+                    <label> Confirmar Contraseña: </label>
+                    <input id="confirmContrasenna" type="password" required>
+                    
+                </div>
+
+                <input id="botonregistrarse" type="submit" value="Registrarse">
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    </main>
+
+  
+  <div id="footer-container"></div>
+
+  <script>
+    // Función para cargar el contenido del header
+    function cargarHeader() {
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+    }
+
+    // Función para cargar el contenido del footer
+    function cargarFooter() {
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    }
+
+    // Llamar a las funciones para cargar el header y el footer cuando el documento esté listo
+    document.addEventListener('DOMContentLoaded', function() {
+        cargarHeader();
+        cargarFooter();
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+   
+    <script type="module"  src = "js/inicioSesion.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+
+</head>
+</head>
+<body>
+  
+  <div id="header-container"></div>
+
+  <main>
+    <div class="contenido">
+
+        <div class="formulario">
+
+            <h2> Iniciar Sesion</h2>
+
+            <form id="formulario" method="post">
+
+                <div class="cedula">
+                    <label> Cédula de identidad: </label>
+                    <input type="text" id="cedula" maxlength="10" required> 
+
+                    <script>
+                        // Función para dar formato a la cédula
+                        function formatCedula(input) {
+                          // Remover cualquier carácter que no sea un dígito
+                          let cedula = input.value.replace(/\D/g, '');
+                        
+                          // Aplicar el formato de cédula (##-####-####)
+                          cedula = cedula.replace(/^(\d{2})(\d{4})(\d{4})$/, '$1-$2-$3');
+                        
+                          // Actualizar el valor del campo de entrada
+                          input.value = cedula;
+                        }
+                        
+                        // Obtener el campo de entrada de la cédula
+                        const cedulaInput = document.getElementById('cedula');
+                        
+                        // Agregar evento de input para formatear la cédula mientras se escribe
+                        cedulaInput.addEventListener('input', function() {
+                          formatCedula(this);
+                        });
+                        </script>
+
+                </div>
+                <div class="contraseña">
+                    <label> Contraseña: </label>
+                    <input id="contrasenna" type="password" required>
+                    
+                </div>
+
+                <input id="botoningresar" type="submit" value="Ingresar">
+
+            </form>
+            
+            <div class = "recuperarContrasenna">
+                <form id="recuperarContrasenna" method="post">
+    
+                    <p>¿Olvidó su contraseña? </p>
+                    <a href="mjm.html"> Olvide contraseña</a>
+    
+                </form>
+            </div>
+            
+            <div class = "registro">
+                <form id="registro" method="post">
+    
+                    <p>¿Ya tienes una cuenta? ¡Registrate! </p>
+                    <a href="registro.html"> Registrarse</a>
+    
+                </form>
+            </div>
+            
+
+        </div>
+        
+
+    </div>
+
+    </main>
+
+  
+  <div id="footer-container"></div>
+
+  <script>
+    // Función para cargar el contenido del header
+    function cargarHeader() {
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+    }
+
+    // Función para cargar el contenido del footer
+    function cargarFooter() {
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    }
+
+    // Llamar a las funciones para cargar el header y el footer cuando el documento esté listo
+    document.addEventListener('DOMContentLoaded', function() {
+        cargarHeader();
+        cargarFooter();
+    });
+</script>
+
+</body>
+</html>

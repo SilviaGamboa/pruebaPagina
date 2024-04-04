@@ -1,0 +1,135 @@
+<medicos>
+    <medico>
+        <idMedico>FPG-1</idMedico>
+        <nombre>Dr. Francisco Pérez García</nombre>
+        <especialidad>Cardiología y Medicina General</especialidad>
+        <ubicacionConsulta>Clínica Árbol de Seda, consultorio 101</ubicacionConsulta>
+        <horariosConsulta>Lunes a Sábado: 08:00-15:00</horariosConsulta>
+        <numeroTel>123-456-7890</numeroTel>
+        <correo>franciscoperez@gmail.com</correo>
+        <reseñas>Experto en el tratamiento de enfermedades cardíacas, altamente recomendado. Calificación: 9.5</reseñas>
+        <biografia>Fundador de Árbol de Seda, con más de 20 años de experiencia en cardiología.</biografia>
+    </medico>
+    <medico>
+        <idMedico>MRH-2</idMedico>
+        <nombre>Dra. María Rodríguez Herrera</nombre>
+        <especialidad>Pediatría</especialidad>
+        <ubicacionConsulta>Clínica Árbol de Seda, consultorio 102</ubicacionConsulta>
+        <horariosConsulta>Domingo a Viernes: 13:00-20:00</horariosConsulta>
+        <numeroTel>987-654-3210</numeroTel>
+        <correo>mariarodriguez@gmail.com</correo>
+        <reseñas>Especializada en el cuidado de niños y adolescentes, atención de alta calidad. Calificación: 9.2</reseñas>
+        <biografia>Cofundadora de la clínica, dedicada al bienestar de los más pequeños.</biografia>
+    </medico>
+    <medico>
+        <idMedico>LGR-3</idMedico>
+        <nombre>Dra. Laura Gómez Ramíres</nombre>
+        <especialidad>Ginecología y Obstetricia</especialidad>
+        <ubicacionConsulta>Clínica Árbol de Seda, consultorio 103</ubicacionConsulta>
+        <horariosConsulta>Lunes a Sábado: 08:00-15:00</horariosConsulta>
+        <numeroTel>555-123-4567</numeroTel>
+        <correo>lauragomez@gmail.com</correo>
+        <reseñas>Especialista en atención prenatal y salud reproductiva, excelente atención al detalle. Calificación: 9.7</reseñas>
+        <biografia>Experta en cuidado de la mujer, comprometida con la salud femenina.</biografia>
+    </medico>
+    <medico>
+        <idMedico>CFG-4</idMedico>
+        <nombre>Dr. Carlos Fernández Gutiérrez</nombre>
+        <especialidad>Dermatología</especialidad>
+        <ubicacionConsulta>Clínica Árbol de Seda, consultorio 104</ubicacionConsulta>
+        <horariosConsulta>Lunes a Sábado: 08:00-15:00</horariosConsulta>
+        <numeroTel>999-876-5432</numeroTel>
+        <correo>carlosfernandez@gmail.com</correo>
+        <reseñas>Ofrece tratamientos avanzados y procedimientos estéticos de calidad. Calificación: 9.0</reseñas>
+        <biografia>Especializado en enfermedades de la piel y cuidado estético, innovador en su campo.</biografia>
+    </medico>
+    <medico>
+        <idMedico>JPA-5</idMedico>
+        <nombre>Dr. Juan Pérez Alvarado</nombre>
+        <especialidad>Ginecología y Obstetricia</especialidad>
+        <ubicacionConsulta>Clínica Árbol de Seda, consultorio 105</ubicacionConsulta>
+        <horariosConsulta>Domingo a Viernes: 13:00-20:00</horariosConsulta>
+        <numeroTel>123-456-7890</numeroTel>
+        <correo>juanperez@gmail.com</correo>
+        <reseñas>Excelente atención y profesionalismo. Calificación: 9.6</reseñas>
+        <biografia>Graduado en la Universidad XYZ, con más de 10 años de experiencia en la especialidad.</biografia>
+    </medico>
+    <medico>
+        <idMedico>MLM-6</idMedico>
+        <nombre>Dra. María López Masís</nombre>
+        <especialidad>Odontología</especialidad>
+        <ubicacionConsulta>Clínica Árbol de Seda, consultorio 106</ubicacionConsulta>
+        <horariosConsulta>Domingo a Viernes: 13:00-20:00</horariosConsulta>
+        <numeroTel>987-654-3210</numeroTel>
+        <correo>marialopez@gmail.com</correo>
+        <reseñas>Trato amable y eficiente. Calificación: 9.3</reseñas>
+        <biografia>Experta en ortodoncia y procedimientos estéticos dentales.</biografia>
+    </medico>
+    <medico>
+        <idMedico>LGP-7</idMedico>
+        <nombre>Dra. Laura Gómez Pereira</nombre>
+        <especialidad>Odontología</especialidad>
+        <ubicacionConsulta>Clínica Árbol de Seda, consultorio 107</ubicacionConsulta>
+        <horariosConsulta>Lunes a Sábado: 08:00-15:00</horariosConsulta>
+        <numeroTel>555-123-4567</numeroTel>
+        <correo>lauragomez@gmail.com</correo>
+        <reseñas>Siempre disponible y atento a las necesidades del paciente. Calificación: 9.8</reseñas>
+        <biografia>Graduada con honores de la Universidad ABC, apasionada por la medicina preventiva.</biografia>
+    </medico>
+    <medico>
+        <idMedico>ARG-8</idMedico>
+        <nombre>Dra. Ana Ramírez González</nombre>
+        <especialidad>Oftalmología</especialidad>
+        <ubicacionConsulta>Clínica Árbol de Seda, consultorio 108</ubicacionConsulta>
+        <horariosConsulta>Domingo a Viernes: 13:00-20:00</horariosConsulta>
+        <numeroTel>999-876-5432</numeroTel>
+        <correo>anaramirez@gmail.com</correo>
+        <reseñas>Especialista altamente cualificada, resuelve todas mis dudas con claridad. Calificación: 9.9</reseñas>
+        <biografia>Experta en cirugía de cataratas y enfermedades oculares.</biografia>
+    </medico>
+    <medico>
+        <idMedico>JMV-9</idMedico>
+        <nombre>Dr. Javier Martínez Velásquez</nombre>
+        <especialidad>Pediatría</especialidad>
+        <ubicacionConsulta>Clínica Árbol de Seda, consultorio 109</ubicacionConsulta>
+        <horariosConsulta>Lunes a Sábado: 08:00-15:00</horariosConsulta>
+        <numeroTel>333-444-5555</numeroTel>
+        <correo>javiermartinez@gmail.com</correo>
+        <reseñas>Cercano y comprensivo con los niños, excelente trato. Calificación: 9.4</reseñas>
+        <biografia>Graduado con especialización en pediatría, dedicado a la salud infantil.</biografia>
+    </medico>
+    <medico>
+        <idMedico>JFO-10</idMedico>
+        <nombre>Dra. Julia Fernández Obando</nombre>
+        <especialidad>Dermatología</especialidad>
+        <ubicacionConsulta>Clínica Árbol de Seda, consultorio 110</ubicacionConsulta>
+        <horariosConsulta>Domingo a Viernes: 13:00-20:00</horariosConsulta>
+        <numeroTel>777-888-9999</numeroTel>
+        <correo>juliafernandez@gmail.com</correo>
+        <reseñas>Resultados visibles desde la primera consulta, muy recomendable. Calificación: 9.1</reseñas>
+        <biografia>Especialista en tratamientos dermatológicos avanzados, líder en su campo.</biografia>
+    </medico>
+    <medico>
+        <idMedico>MGD-11</idMedico>
+        <nombre>Dr. Manuel Gómez Díaz</nombre>
+        <especialidad>Medicina General</especialidad>
+        <ubicacionConsulta>Clínica Árbol de Seda, consultorio 115</ubicacionConsulta>
+        <horariosConsulta>Domingo a Viernes: 13:00-20:00</horariosConsulta>
+        <numeroTel>555-666-7777</numeroTel>
+        <correo>manuelgomez@gmail.com</correo>
+        <reseñas>Médico general de confianza, gran capacidad diagnóstica. Calificación: 9.4</reseñas>
+        <biografia>Atiende una amplia variedad de problemas de salud en pacientes de todas las edades, enfocado en la prevención y el tratamiento oportuno.</biografia>
+    </medico>
+    <medico>
+        <idMedico>ARG-12</idMedico>
+        <nombre>Dr. Andrés Ramírez González</nombre>
+        <especialidad>Oftalmología</especialidad>
+        <ubicacionConsulta>Clínica Árbol de Seda, consultorio 116</ubicacionConsulta>
+        <horariosConsulta>Lunes a Sábado: 08:00-15:00</horariosConsulta>
+        <numeroTel>111-222-3333</numeroTel>
+        <correo>andresramirez@gmail.com</correo>
+        <reseñas>Especialista en enfermedades oculares, atención de alta calidad. Calificación: 9.7</reseñas>
+        <biografia>Con más de 15 años de experiencia en Oftalmología, se dedica al diagnóstico y tratamiento de problemas visuales y oculares.</biografia>
+    </medico>
+</medicos>
+

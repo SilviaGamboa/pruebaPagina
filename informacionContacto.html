@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árbol de Seda</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    
+</head>
+</head>
+<body>
+  
+  <div id="header-container"></div>
+
+  <main>
+
+    <div class="container">
+        <h1>Informacion de contacto  de Clínica Árbol de Seda</h1>
+        <div class="contact-info">
+            <h2>Detalles de contacto</h2>
+            <p><strong>Dirección:</strong> De la municipalidad de Turrialba, 75 metros este, Provincia de Cartago, Turrialba</p>
+            <p><strong>Teléfono:</strong> 2538 1257</p>
+            <p><strong>Correo electrónico:</strong> clinicaarboldeseda@gmail.com</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.4567453016863!2d-83.7659925!3d9.9068516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0d698d8ed25f1%3A0x43119561149031f1!2sDe%20la%20municipalidad%20de%20Turrialba%2C%2075%20metros%20este%2C%20Provincia%20de%20Cartago%2C%20Turrialba!5e0!3m2!1sen!2scr!4v1648346316000!5m2!1sen!2scr" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    
+        <div class="contact-form">
+            <h2>¡Contactate con nosotros via e-mail!</h2>
+            <form action="#" method="POST">
+                <div><input type="text" name="name" placeholder="Nombre" required></div>
+                <div><input type="email" name="email" placeholder="Correo electrónico" required></div>
+                <div><textarea name="message" placeholder="Mensaje" rows="5" required></textarea></div>
+                
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </div>
+    </div>
+    
+
+
+    </main>
+
+  
+    <div id="footer-container"></div>
+
+    <script>
+        // Función para cargar el contenido del header
+        function cargarHeader() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-container').innerHTML = data;
+                });
+        }
+
+        // Función para cargar el contenido del footer
+        function cargarFooter() {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-container').innerHTML = data;
+                });
+        }
+
+        // Llamar a las funciones para cargar el header y el footer cuando el documento esté listo
+        document.addEventListener('DOMContentLoaded', function() {
+            cargarHeader();
+            cargarFooter();
+        });
+    </script>
+
+</body>
+</html>
